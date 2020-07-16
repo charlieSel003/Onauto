@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <parameter name="password" value="admin123"/>
+  <parameter name="username" value="Admin"/>
+  <test name="Test">
+    <parameter name="password" value="admin123"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="Demo"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="methods">
+    <parameter name="password" value="admin123"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="Demo">
+        <methods>
+          <include name="verifylogin"/>
+          <include name="bverifylogin"/>
+          <include name="launch"/>
+          <include name="averifylogin"/>
+        </methods>
+      </class> <!-- Demo -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
