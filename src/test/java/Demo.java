@@ -25,7 +25,7 @@ public class Demo {
 	
 	
 	@Test
-	public void verifylogin(){
+	public void verifylogin12345(){
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
 		driver.findElement(By.id("btnLogin")).click();
